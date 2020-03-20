@@ -1,0 +1,15 @@
+{
+  "name": "loginpage",
+  "version": "1.0.0",
+  "description": "API for login page",
+  "main": "loginPage.js",
+  "scripts": {
+    "login-data": "json-server --watch loginPage.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  },
+  "devDependencies": {}
+}
