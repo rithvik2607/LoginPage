@@ -27,16 +27,21 @@ function myfunction(){
             return data;
         }
 
-        let url =`http://localhost:3000/login?uname=${uname}`;
+        let url =`http://localhost:3000/login?uname=${uname.value}`;
         let settings={method:"GET"};
         search(url,settings).then((res) =>{
-            console.log(res);
-            if(uname.value===res.name && vitmail.value===res.mail && password.value===res.password)
-            {
-                alert('User successfully logged in');
+            console.log(res[0]);
+            try{
+                if(uname.value===res[0].uname && vitmail.value===res[0].mail && password.value===res[0].password)
+                {
+                    alert('User successfully logged in');
+                }
+                else
+                {
+                    alert('Login failed');
+                }
             }
-            else
-            {
+            catch{
                 alert('Login failed');
             }
         })
