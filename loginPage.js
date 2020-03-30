@@ -27,7 +27,7 @@ function myfunction(){
             return data;
         }
 
-        let url =`http://localhost:3000/login?uname=${uname.value}`;
+        let url =`http://d773e6eb.ngrok.io/login?uname=${uname.value}`;
         let settings={method:"GET"};
         search(url,settings).then((res) =>{
             console.log(res[0]);
